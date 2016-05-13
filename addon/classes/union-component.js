@@ -11,6 +11,7 @@ const UnionComponent = {
 function unionComponentFrom(classList) {
   return {
     create(props) {
+      console.log('derp');
       const type = props.attrs.type;
       const owner = getOwner(props);
       const klass = owner.resolveRegistration(`component:${type}`);
